@@ -88,6 +88,32 @@ nav{
     background-repeat: no-repeat;
     margin-left: 90px;
 } 
+
+/*----------
+   logos
+-------- */
+.logo{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    position: absolute;
+    width: 1110px;
+    height: 80px;
+    margin-top: 50px;
+    border-top: 1px solid ghostwhite;
+    border-bottom: 1px solid ghostwhite;
+    padding: 15px; 
+}
+.amazon{
+    margin-top: 8px;
+}
+.rakuten{
+    margin-top: 5px;
+}
+.walmart{
+    margin-top: 3px;
+}
+
        /*===========
         Collection
        ============ */
@@ -97,7 +123,7 @@ nav{
     font-weight: 600;
     color: #3A3A3A;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 150px;
     
 }
 .papular-collection{
@@ -167,6 +193,7 @@ footer{
     justify-content: center;
     padding:10px;
     height: 150px;
+    width: 100%;
     background-color: rgb(12, 12, 44);
     color: rgba(173, 117, 13, 0.698);  
 }
@@ -176,3 +203,47 @@ footer{
     font-size: 20px;
     padding: 10px;
 }
+.copyright{
+    text-align: center;
+    font-size: 20px;
+}
+.reserved{
+    text-align: center;
+    font-size: 18px;
+}
+.icon{
+    text-align: center;
+}
+     /* =================
+       Media Queries
+       ================= */
+
+       /* =Mobile Devices= */
+@media only screen and (max-width:688px) {
+    .container{
+        width: 100%;
+    }
+    .media-store, .papular-collection{
+        
+        grid-template-columns: repeat(1 , 1fr);
+        align-items: center;
+    }
+    .wellcome-store, .main-camera, .papular-collection{
+       flex-direction: column;
+    }
+    
+    }
+    
+}
+
+    /*=Table Devices=*/
+    
+    @media only screen and (min-width:688px) and (max-width:992px) {
+        .container{
+            width: 100%;
+        }
+        .media-store, .papular-collection{
+            grid-template-columns: repeat(2 , 1fr);
+            align-items: center;
+        }
+    }
